@@ -3,7 +3,7 @@ import { format } from 'date-fns';
 import { CalendarDays } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { DrawerClose } from './ui/drawer';
+import { DrawerClose } from '../ui/drawer';
 
 function SearchCard(blog: IBlog) {
 	return (
