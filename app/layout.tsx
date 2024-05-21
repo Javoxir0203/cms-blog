@@ -1,13 +1,21 @@
+import { Toaster } from '@/components/ui/sonner';
+import { ChildProps } from '@/types';
 import type { Metadata } from 'next';
 import { Crete_Round, Work_Sans } from 'next/font/google';
-import './globals.css';
-import { ChildProps } from '@/types';
-import { ThemeProvider } from '@/components/providers/theme_provider';
-import { Toaster } from '@/components/ui/sonner';
 import NextTopLoader from 'nextjs-toploader';
+import './globals.css';
+import { ThemeProvider } from '@/components/providers/theme_provider';
 
-const creteRound = Crete_Round({ weight: ['400'], subsets: ['latin'], variable: '-- font-creteRound' });
-const workSans = Work_Sans({ weight: ['500', '600'], subsets: ['latin'], variable: '--font-workSans' });
+const creteRound = Crete_Round({
+	weight: ['400'],
+	subsets: ['latin'],
+	variable: '--font-creteRound',
+});
+const workSans = Work_Sans({
+	weight: ['500', '600'],
+	subsets: ['latin'],
+	variable: '--font-workSans',
+});
 
 export const metadata: Metadata = {
 	metadataBase: new URL('https://javoxirjon.uz'),
@@ -34,7 +42,7 @@ function RootLayout({ children }: ChildProps) {
 	return (
 		<html lang='en' suppressHydrationWarning>
 			<body className={`${creteRound.variable} ${workSans.variable} overflow-x-hidden`}>
-				<ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
+				<ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange storageKey='blog-theme'>
 					<NextTopLoader showSpinner={false} />
 					{children}
 					<Toaster position='top-center' />
@@ -43,4 +51,5 @@ function RootLayout({ children }: ChildProps) {
 		</html>
 	);
 }
+
 export default RootLayout;
