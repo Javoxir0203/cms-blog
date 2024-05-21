@@ -1,4 +1,4 @@
-import { getArchiveBlogs, getBlogs } from '@/service/blog.service';
+import { getArchiveBlogs } from '@/service/blog.service';
 import { format } from 'date-fns';
 import { Archive, Dot, Home } from 'lucide-react';
 import { Metadata } from 'next';

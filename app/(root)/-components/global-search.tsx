@@ -1,6 +1,6 @@
 'use client';
 
-import SearchCard from '@/components/search';
+import SearchCard from '@/components/cards/search';
 import { Badge } from '@/components/ui/badge';
 import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
 import { Input } from '@/components/ui/input';
@@ -45,8 +45,8 @@ function GlobalSearch() {
 				<div className='container max-w-6xl mx-auto py-12'>
 					<Input className='bg-secondary' placeholder='Type to search blog...' onChange={debounceSearch} disabled={isLoading} />
 					{isLoading && <Loader2 className='animate-spin mt-4 mx-auto' />}
-					{blogs.length ? <div className='text-2xl font-creteRound mt-8'>{blogs.length} Results found.</div> : null}
-					<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 mt-2'>{blogs && blogs.map(blog => <SearchCard key={blog.slug} {...blog} />)}</div>
+					{blogs.length ? <div className='text-2xl font-creteRound mt-8 '>{blogs.length} Results found.</div> : null}
+					<div className='grid grid-cols-2 md:grid-cols-4 gap-4 lg:grid-cols-6 mt-2'>{blogs && blogs.map(blog => <SearchCard key={blog.slug} {...blog} />)}</div>
 					{blogs.length ? <Separator className='mt-3' /> : null}
 					<div className='flex flex-col space-y-2 mt-4'>
 						<div className='flex items-center gap-2'>

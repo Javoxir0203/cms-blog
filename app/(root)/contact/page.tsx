@@ -1,7 +1,4 @@
 import ContactForm from '@/components/forms/contact';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { Dot, Home, Mail, Phone, Send } from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -30,7 +27,7 @@ function ContactPage() {
 
 			<div className='grid grid-cols-2 max-md:grid-cols-1 gap-4 mt-6'>
 				<div className='flex flex-col'>
-					<h1 className='text-4xl font-creteRound'>Contact Sammi</h1>
+					<h1 className='text-4xl font-creteRound'>Contact Javoxir</h1>
 					<p className='mt-2 text-muted-foreground'>I am here to help and answer any question you might have. I look forward to hearing from you</p>
 
 					<div className='mt-12 flex items-center gap-3'>
