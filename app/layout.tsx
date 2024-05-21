@@ -1,9 +1,9 @@
-import { Toaster } from '@/components/ui/sonner';
-import { ChildProps } from '@/types';
 import type { Metadata } from 'next';
-import { Crete_Round, Work_Sans } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
+import { Crete_Round, Work_Sans } from 'next/font/google';
 import './globals.css';
+import { ChildProps } from '@/types';
+import { Toaster } from '@/components/ui/sonner';
 import { ThemeProvider } from '@/components/providers/theme_provider';
 
 const creteRound = Crete_Round({
