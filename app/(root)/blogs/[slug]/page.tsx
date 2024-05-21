@@ -2,10 +2,10 @@ import { getReadingTime } from '@/lib/utils'
 import { getDetailedBlog } from '@/service/blog.service'
 import { format } from 'date-fns'
 import parse from 'html-react-parser'
-import { ArrowUpRight, CalendarDays, Clock, Minus } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import ShareBtns from '../../_components/share-btns'
+import { ArrowUpRight, CalendarDays, Clock, Minus } from 'lucide-react'
 
 export async function generateMetadata({
 	params,
