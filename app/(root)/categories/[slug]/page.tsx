@@ -1,18 +1,22 @@
-import BlogCard from '@/components/cards/blog';
-import { getBlogsByCategory } from '@/service/category.service';
-import { Dot, Home } from 'lucide-react';
-import Link from 'next/link';
+import BlogCard from '@/components/cards/blog'
+import { getBlogsByCategory } from '@/service/category.service'
+import { Dot, Home } from 'lucide-react'
+import Link from 'next/link'
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-	const blog = await getBlogsByCategory(params.slug);
+export async function generateMetadata({
+	params,
+}: {
+	params: { slug: string }
+}) {
+	const blog = await getBlogsByCategory(params.slug)
 
 	return {
 		title: blog.name,
-	};
+	}
 }
 
 async function Page({ params }: { params: { slug: string } }) {
-	const category = await getBlogsByCategory(params.slug);
+	const category = await getBlogsByCategory(params.slug)
 
 	return (
 		<div className='max-w-6xl mx-auto'>
@@ -23,7 +27,10 @@ async function Page({ params }: { params: { slug: string } }) {
 
 				<div className='flex gap-1 items-center mt-4'>
 					<Home className='w-4 h-4' />
-					<Link href={'/'} className='opacity-90 hover:underline hover:opacity-100'>
+					<Link
+						href={'/'}
+						className='opacity-90 hover:underline hover:opacity-100'
+					>
 						Home
 					</Link>
 					<Dot />
@@ -37,7 +44,7 @@ async function Page({ params }: { params: { slug: string } }) {
 				))}
 			</div>
 		</div>
-	);
+	)
 }
 
-export default Page;
+export default Page

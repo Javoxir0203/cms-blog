@@ -1,16 +1,15 @@
-import CategoriesTagsCard from '@/components/cards/categories-tags';
-import { getTags } from '@/service/tag.service';
-import { Dot, Home } from 'lucide-react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import React from 'react';
+import CategoriesTagsCard from '@/components/cards/categories-tags'
+import { getTags } from '@/service/tag.service'
+import { Dot, Home } from 'lucide-react'
+import { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
 	title: 'All tags',
-};
+}
 
 async function Page() {
-	const tags = await getTags();
+	const tags = await getTags()
 
 	return (
 		<div className='max-w-6xl mx-auto'>
@@ -21,7 +20,10 @@ async function Page() {
 
 				<div className='flex gap-1 items-center mt-4'>
 					<Home className='w-4 h-4' />
-					<Link href={'/'} className='opacity-90 hover:underline hover:opacity-100'>
+					<Link
+						href={'/'}
+						className='opacity-90 hover:underline hover:opacity-100'
+					>
 						Home
 					</Link>
 					<Dot />
@@ -35,7 +37,7 @@ async function Page() {
 				))}
 			</div>
 		</div>
-	);
+	)
 }
 
-export default Page;
+export default Page

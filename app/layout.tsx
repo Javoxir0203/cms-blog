@@ -1,9 +1,9 @@
-import type { Metadata } from 'next';
-import NextTopLoader from 'nextjs-toploader';
-import { Crete_Round, Work_Sans } from 'next/font/google';
-import './globals.css';
-import { ChildProps } from '@/types';
 import { Toaster } from '@/components/ui/sonner';
+import { ChildProps } from '@/types';
+import type { Metadata } from 'next';
+import { Crete_Round, Work_Sans } from 'next/font/google';
+import NextTopLoader from 'nextjs-toploader';
+import './globals.css';
 import { ThemeProvider } from '@/components/providers/theme_provider';
 
 const creteRound = Crete_Round({
@@ -18,23 +18,23 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-	metadataBase: new URL('https://javoxirjon.uz'),
-	title: 'Javoxir dasturlashga oid maqolalar',
-	description: 'Dasturlash haqida yangliklar, maslahatlar,va dasturlash sohasidagi eng so`nggi  xabarlari.Bizning blogda dasturlashni o`rganish va rivojlantirish uchun qo`llanma topishingiz mumkin',
-	authors: [{ name: 'Javoxir Eshquvvatov', url: 'https://javoxirjon.uz' }],
+	metadataBase: new URL('https://test-blog.sammi.ac'),
+	title: 'Sammi dasturlashga oid maqolalar',
+	description: 'Dasturlash haqida yangiliklar, maslahatlar, va dasturlash sohasidagi eng soʻnggi xabarlar. Bizning blogda dasturlashni oʻrganish va rivojlantirish uchun qoʻllanma topishingiz mumkin.',
+	authors: [{ name: 'Samar Badriddinov', url: 'https://sammi.ac' }],
 	icons: { icon: '/favicon.png' },
 	keywords:
-		"Javoxir Eshquvvatov,  dasturlash kurslari, dasturlashga oid darslar, reactjs uzbek tilida, redux uzbek tilida, bepul dasturlash, rezyume yozish, portfolio,  javascript,  raqamli avlod, javascript, reactjs, vuejs, javascript darslari, reactjs darslari,  dasturlash darslari,typescript o'zbek tilida, o'zbek tilida dasturlash, reactjs o'zbek tilida, reactjs darslari o'zbek tilida, javascript darslari, javascript darslari o'zbek tilida, dasturash darslari o'zbek tilida, dasturlashni o'rganish, dasturlash, IT loyihalar o'zbek tilida",
+		"samar badriddinov, sammi, dasturlash kurslari, dasturlashga oid darslar, reactjs uzbek tilida, vuejs uzbek tilida, redux uzbek tilida, sammi, sammi academy, bepul dasturlash, rezyume yozish, portfolio, sammi javascript, sammi raqamli avlod, javascript, reactjs, vuejs, javascript darslari, reactjs darslari, vuejs darslari, dasturlash darslari, o'zbek tilida dasturlash, reactjs o'zbek tilida, reactjs darslari o'zbek tilida, javascript darslari, javascript darslari o'zbek tilida, dasturash darslari o'zbek tilida, dasturlashni o'rganish, dasturlash, IT loyihalar o'zbek tilida",
 	openGraph: {
-		title: 'Javoxir dasturlashga oid maqolalar',
-		description: 'Dasturlash haqida yangliklar, maslahatlar,va dasturlash sohasidagi eng so`nggi  xabarlari.Bizning blogda dasturlashni o`rganish va rivojlantirish uchun qo`llanma topishingiz mumkin',
+		title: 'Sammi dasturlashga oid maqolalar',
+		description: 'Dasturlash haqida yangiliklar, maslahatlar, va dasturlash sohasidagi eng soʻnggi xabarlar. Bizning blogda dasturlashni oʻrganish va rivojlantirish uchun qoʻllanma topishingiz mumkin.',
 		type: 'website',
-		url: 'https://Javoxirjon.uz',
+		url: 'https://test-blog.sammi.ac',
 		locale: 'en_EN',
 		images: 'https://media.graphassets.com/kXL006lyRnW46IKTHdHs',
 		countryName: 'Uzbekistan',
-		siteName: 'Javoxir',
-		emails: 'javoxireshquvvatovv@gmail.com',
+		siteName: 'Sammi',
+		emails: 'info@sammi.ac',
 	},
 };
 
